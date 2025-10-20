@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="signup.css?version=1.01">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <div>
+            Sign Up
+        </div>
+        <div class="login-parent">
+            <form action="POST" id="signup">
+                <div>
+                    <label for="username">Username : </label>
+                    <input type="text" name="username" class="username"/>
+                </div>
+                <div>
+                    <label for="password">Password : </label>
+                    <input type="password" name="password" class="password"/>
+                </div>
+                <div>
+                    <div class="check-parent">
+                        <!-- <label for="login/create"> Login</label>
+                        <input type="checkbox" name="login/create" class="checks" checked/> -->
+                    </div>
+                    <input type="submit" name="submit" class="submit" value="SUBMIT"/>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="signup.js?version=1.01"></script>
+    </body>
+</html>

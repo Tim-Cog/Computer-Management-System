@@ -1,0 +1,67 @@
+.parent{
+    margin-left: 25%;
+    margin-top: 1%;
+    width: 50%;
+}
+
+form{
+    margin-top: -5%;
+}
+
+h1{
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+fieldset{
+    border: 3px solid black;
+    margin-top: 2%;
+}
+
+fieldset > div{
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 40px;
+}
+
+form > div{
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 40px;
+}
+
+legend{
+    font-size: math;
+    font-weight: bold;
+    text-align: right;
+    margin-left: 78%;
+    margin-bottom: 1%;
+}
+
+.description{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: larger;
+}
+    
+.input-field{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: larger;
+}
+
+.input-field > option{
+    font-size: larger;
+}
+
+.assign-input-field{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: larger;
+}
+
+.assign-input-field > option{
+    font-size: larger;
+}

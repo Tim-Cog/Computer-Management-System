@@ -1,0 +1,35 @@
+.login-parent{
+    width: 28%;
+    margin-left: 38%;
+    margin-top: 10%;
+}
+
+
+form{
+    border: 1px solid black;
+    border-radius: 17px;
+    /* padding-bottom: 12%; */
+}
+
+form > div{
+    padding: 5%;
+    font-size: xx-large;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+form > div > input{
+    font-size: large;
+}
+
+.submit{
+    border-radius: 26px;
+}
+
+.submit:has{
+    grid-template-columns: 62% 30%;
+}
+
+.check-parent{
+    font-size: small;
+}

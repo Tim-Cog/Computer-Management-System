@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "list_devices.css?version=1.20">
+        <title>Devices List</title>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="top-bar">
+                <div>
+                    <img src="../../assets/metlogo2.0.png">
+                </div>
+                <div>
+                    <div>
+                        <button class=refresh>Refresh</button>
+                    </div>
+                    <div>
+                        <button class="add-new-device">Add New Device</button>
+                    </div>
+                </div>
+                <div class="search-area">
+                    <form action="POST" id="search-form">
+                        <div class="filter-search">
+                            <select name="filter" id="select-filter" required>
+                                <option value="" disabled selected>Choose a search category</option>
+                                <option value="Device Name">Device Name</option>
+                                <option value="Device Model">Device Model</option>
+                                <option value="User Name">User Name</option>
+                                <option value="Serial Number">Serial Number</option>
+                                <option value="Vendor">Vendor</option>
+                                <option value="Branch">Branch</option>
+                                <option value="Department">Department</option>
+                            </select>
+                        </div>
+                        <input type="search" placeholder="Enter Search Term" class="search-value" name="search-value" required>
+                        <input type="submit" class="search-button" value="Search" name="search-button"/>
+                    </form>
+                </div>
+            </div>
+            <div class="body">
+                <table class="all-info">
+                    <thead>
+                        <tr>
+                            <th>Device Name</th>
+                            <th>Device Model</th>
+                            <th>Device Type</th>
+                            <th>Serial Number</th>
+                            <th>Cost</th>
+                            <th>Device Specs</th>
+                            <th>Vendor</th>
+                            <th>Purchased On</th>
+                            <th>Department</th>
+                            <th>Branch</th>
+                            <th>Currently<br>Assigned To</th>
+                            <th>History</th>
+                            <th class="DAssign" style="display: none;"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="reassign-parent">
+            <div class="close-reassign-window"></div>
+            <div class="reassign">
+                <form action="POST" id="reassign-form">
+                    <div>
+                        <label class="description">DEVICE NAME :</label>
+                        <input type="text" id="device-name" class="input-field" name="deviceName" readonly = "readonly"/>
+                    </div>
+                    <div>
+                        <label class="description">DEVICE MODEL :</label>
+                        <input type="text" id="device-model"class="input-field" name="deviceModel" readonly = "readonly"/>
+                    </div>
+                    <div>
+                        <label class="description">SERIAL NUMBER :</label>
+                        <input type="text" id="serial-number"class="input-field" name="serialNumber" readonly = "readonly"/>
+                    </div>
+                    <div>
+                        <label class="description">ASSIGNED TO :</label>
+                        <input type="text" id="assigned-to"class="input-field" name="assignedTo"/>
+                    </div>
+                    <div>
+                        <label class="description">ASSIGNED ON :</label>
+                        <input type="date" id="assigned-on"class="input-field" name="assignedOn" required/>
+                    </div>
+                    <div id="warning" style="color: red; display: none;">Returned on must be after Assigned on</div>
+                    <div>
+                        <label class="description">RETURNED ON :</label>
+                        <input type="date" id="returned-on"class="input-field" name="returnedOn"/>
+                    </div>
+                    <div>
+                        <label class="description">DEPARTMENT :</label>
+                        <select id="department"class="input-field" name="department" required>
+                            <option value="" disabled selected>Choose a Department</option>
+                            <option value="Life">Life</option>
+                            <option value="Health">Health</option>
+                            <option value="Pensions">Pensions</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="description">BRANCH :</label>
+                        <select name="branches" id="branch" class="input-field" required>
+                            <option value="" disabled selected>Choose a Branch</option>
+                            <option value="Head Office">Head Office</option>
+                            <option value="Ring Road">Ring Road</option>
+                            <option value="Ho">Ho</option>
+                            <option value="Takoradi">Takoradi</option>
+                            <option value="Koforidua">Koforidua</option>
+                        </select>
+                    </div>
+                    <div class="assign-check-box">
+                        <input type="text" value="no" id="updteOrInsert" name="assignCheckBox" style="display: none;"/>
+                    </div>
+                    <div class="submitclose">
+                        <button class="cancel" type="button">CANCEL</button>
+                        <input type="submit" class="submit" value="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="history-container">
+            <tr>
+                <th>Device Name</th>
+                <th>Date Assigned</th>
+                <th>Device Returned</th>
+                <th>Department</th>
+                <th>Branch</th>
+                <th>User</th>
+            </tr>
+        </table>
+        <div class="translucent"></div>
+        <div class="no-results">
+            <div class="close-button"></div>
+            <div class="no-results-text">No Results Found</div>
+        </div>
+        <form action="POST" id="submit-history">
+            <input type="text" name="transitionHistoryDeviceID" id="submit-history-id">
+            <input type="submit" class="submit-history-button">
+        </form>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="list_devices.js?version1.28"></script>
+    </body>
+</html>
